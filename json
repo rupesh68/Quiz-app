@@ -1,0 +1,2084 @@
+const quizData = [
+  
+  {
+    question:
+      "In JavaScript, what is the range of numbers returned from the Math.random() method?",
+
+    correct: "Between 0 and 1 (including 0; not including 1).",
+    a: "Between 0 and 1 (including neither 0 or 1).",
+    b: "Between 0 and 1 (including 1; not including 0).",
+    c: "Between 0 and 100 (including 0; not including 100).",
+  },
+  {
+    question:
+      "In JavaScript, what is the difference between the indexOf() and search() methods?",
+
+    correct: "indexOf() can take a second parameter while search() cannot",
+    a: "Both methods are the same",
+    b: "indexOf() only takes regular expressions",
+    c: "The search() method runs 4x faster than the indexOf() method",
+  },
+  {
+    question: "What does the 'debugger' statement in JavaScript do?",
+
+    correct: "It acts as a breakpoint in a program",
+    a: "It will debug errors in the current statement",
+    b: "It will debug all the errors in the program at runtime",
+    c: "All of the above",
+  },
+  {
+    question: "What kind of programming can JavaScript be used for?",
+
+    correct: "Both Client and Server side programming",
+    a: "Server side only",
+    b: "Client side only",
+    c: "None of these options",
+  },
+  {
+    question:
+      "In JavaScript, if let x='5', then what will be the value of console.log(x==5,x===5)?",
+
+    correct: "true false",
+    a: "true true",
+    b: "false true",
+    c: "false false",
+  },
+  {
+    question:
+      "In JavaScript, which Web API is used to display a dialog box with an optional message?",
+
+    correct: "window.alert()",
+    a: "window.alertHTML()",
+    b: "window.alertContent()",
+    c: "window.alertBox()",
+  },
+  {
+    question:
+      "In JavaScript, if let word='Intelligent', then what will be the value of word.slice(2,5)?",
+
+    correct: "tel",
+    a: "tellig",
+    b: "ll",
+    c: "Inigent",
+  },
+  {
+    question:
+      "In Javascript, what keyword is used to check whether a given property in an object is valid?",
+
+    correct: "in",
+    a: "is in",
+    b: "exists",
+    c: "lies",
+  },
+  {
+    question:
+      "In JavaScript, which method uses a callback function for each element in the array?",
+
+    correct: "forEach()",
+    a: "every(",
+    b: "forEvery()",
+    c: "each()",
+  },
+  {
+    question:
+      "Which of the following JavaScript array methods would run the slowest in a worst-case scenario?",
+
+    correct: "shift()",
+    a: "pop()",
+    b: "push()",
+    c: "All take about the same time on an array of the same size.",
+  },
+  {
+    question:
+      "In JavaScript, if let n = 12345.6789, then what will be the result for console.log(n.toFixed())?",
+
+    correct: "12346",
+    a: "12345",
+    b: "12345.6789",
+    c: "Undefined. toFixed() must take parameters",
+  },
+  {
+    question:
+      "In JavaScript, what will be the value for console.log(((a, b = 1, c) => {}).length)?",
+
+    correct: "1",
+    a: "3",
+    b: "2",
+    c: "0",
+  },
+  {
+    question:
+      "What is the process of converting a value from one data type to another called?",
+
+    correct: "Type Coercion",
+    a: "Type Casting",
+    b: "Data Converting",
+    c: "Change Value",
+    
+  },
+  {
+    question: "Which web API method cancels an event's default behavior?",
+
+    correct: "preventDefault()",
+    a: "cancel()",
+    b: "preVent()",
+    c: "stop()",
+    
+  },
+  {
+    question:
+      "Which of the following methods allows you to set up functions to be called when a specified event happens, such as when a user clicks a button?",
+
+    correct: "addEventListener()",
+    a: "listenEvent()",
+    b: "callEvent()",
+    c: "eventWake()",
+    
+  },
+  {
+    question:
+      "In JavaScript, which Web API is used to insert a child node anywhere under the parent node?",
+
+    correct: "insertBefore()",
+    a: "prepend()",
+    b: "append()",
+    c: "lookupPrefix()",
+   
+  },
+  {
+    question:
+      "In JavaScript, which property of an element allows you to get or set the HTML markup contained within the element?",
+
+    correct: "innerHTML",
+    a: "insertAdjacentHTML",
+    b: "insertElement",
+    c: "setHTML",
+    
+  },
+  {
+    question:
+      "In JavaScript, what is it called when you have a combination of a function and its lexical environment?",
+
+    correct: "Closure",
+    a: "Debouncing",
+    b: "Throttling",
+    c: "Scope Chaining",
+    
+  },
+  {
+    question:
+      "In JavaScript, what does a unary plus operator attempt to convert its operand to?",
+
+    correct: "a number",
+    a: "a string",
+    b: "an array",
+    c: "a sum",
+  
+  },
+  {
+    question:
+      "Which Web API used with JavaScript provides information about the size and position of an element?",
+
+    correct: ".getBoundingClientRect()",
+    a: ".getOwnPropertyDescriptors()",
+    b: ".assign()",
+    c: ".entries()",
+ 
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to remove white space from the beginning and end of a string?",
+
+    correct: ".trim()",
+    a: ".substring()",
+    b: ".reduce()",
+    c: ".slice()",
+    
+  },
+  {
+    question:
+      "In JavaScript, which built-in method/object will return the unique values of an array?",
+
+    correct: "Set",
+    a: "map()",
+    b: "reduce()",
+    c: "filter()",
+   
+  },
+  {
+    question:
+      "In JavaScript, all objects inherit a built-in property from a  ___________________.",
+
+    correct: "prototype",
+    a: "instance variable",
+    b: "node",
+    c: "accessor",
+  
+  },
+  {
+    question:
+      "In JavaScript, every class has a special ____________ method that is used to create a new object instance of the class.",
+
+    correct: "constructor",
+    a: "starter",
+    b: "assign",
+    c: "apply",
+   
+  },
+  {
+    question:
+      "In JavaScript, a variable declared with the _________ keyword must be assigned an initial value.",
+
+    correct: "const",
+    a: "finally",
+    b: "new",
+    c: "var",
+    
+  },
+  {
+    question:
+      "In JavaScript, given the array, 'let array = [0, 1, 2, 3]', what is a valid way to clear all of the array's values?",
+
+    correct: "array.length = 0",
+    a: "array.none()",
+    b: "array.concat()",
+    c: "array.push()",
+    
+  },
+  {
+    question:
+      "In JavaScript, a variable that has been declared but not assigned a value is known as ____________.",
+
+    correct: "undefined",
+    a: "unknown",
+    b: "unassigned",
+    c: "pending",
+    
+  },
+  {
+    question:
+      "In JavaScript, a variable that has been declared and assigned a value of 'no value' is ___________________",
+
+    correct: "null",
+    a: "non-value",
+    b: "empty",
+    c: "unreturned",
+    
+  },
+  {
+    question:
+      "In JavaScript, what is the index of the first element in an array?",
+
+    correct: "0",
+    a: "1",
+    b: "first",
+    c: "initial",
+    
+  },
+  {
+    question:
+      "In a JavaScript switch statement, the __________________ case executes if none of the options are true.",
+
+    correct: "default",
+    a: "override",
+    b: "else",
+    c: "alert",
+    
+  },
+  {
+    question:
+      "In JavaScript, which comparison operator is used to express strict equality?",
+
+    correct: "===",
+    a: ">=",
+    b: "+=",
+    c: "<=",
+    
+  },
+  {
+    question:
+      "In JavaScript, select the right syntax for an ES6 arrow function:",
+
+    correct: "let variable = () => {//code block}",
+    a: "let variable => (){//code block}",
+    b: "let variable = function() => {//code block}",
+    c: "let variable = function(){//code block}",
+    Explanation:
+      "ES6 arrow functions provide you with an alternative way to write shorter syntax compared to the traditional function expression.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions",
+  },
+  {
+    question:
+      "In JavaScript, what will be the value of output? let output = null ?? 20",
+
+    correct: "20",
+    a: "undefined",
+    b: "null",
+    c: "Syntax error",
+    Explanation:
+      "The nullish coalescing operator in JavaScript will return the right-hand side operand if the left-hand side operand is null or undefined.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator",
+  },
+  {
+    question:
+      "In JavaScript, in the global execution context, 'this' refers to the ______ object whether in strict mode or not.",
+
+    correct: "window",
+    a: "null",
+    b: "undefined",
+    c: "document",
+    Explanation:
+      "In the global execution context, the 'this' keyword always points to the window object",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this",
+  },
+  {
+    question: "In JavaScript, which queue is emptied first by an event loop?",
+
+    correct: "Microtask queue",
+    a: "Callback queue (Macrotask queue)",
+    b: "None",
+    c: "Both",
+    Explanation:
+      "An event loop first empties the Microtask queue and once it is empty it starts to empty the Callback queue.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop",
+  },
+  {
+    question:
+      "In JavaScript, which of the following is NOT in the Temporal Dead Zone(TDZ) during hoisting?",
+
+    correct: "var",
+    a: "let",
+    b: "const",
+    c: "class",
+    Explanation:
+      "var is hoisted with the default value of undefined while let, const and classes are hoisted but are in the Temporal Dead Zone(TDZ) until the declaration is executed.",
+    Link: "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting",
+  },
+  {
+    question:
+      "In JavaScript, which of the following expressions will return true?",
+
+    correct: "null >= 0",
+    a: "null == 0",
+    b: "null === 0",
+    c: "null > 0",
+    Explanation:
+      "null >= 0 and null <= 0 will both result in true because these operators will convert null to 0. With the == operator, null only equals undefined.",
+    Link: "https://262.ecma-international.org/5.1/#sec-11.8.5",
+  },
+  {
+    question:
+      "In JavaScript, which of the following is a commonly used web API?",
+
+    correct: "console",
+    a: "Array",
+    b: "Object",
+    c: "let, var, const",
+    Explanation:
+      "console is part of a web API which is provided by browsers and Node.js.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/API/console",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns a function?",
+
+    correct: "bind",
+    a: "apply",
+    b: "call",
+    c: "None of given",
+    Explanation:
+      "The bind function returns a new function with given arguments as the new function's 'this' keyword.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns the day of the month for the specified date according to local time?",
+
+    correct: "getDate()",
+    a: "getTheDate()",
+    b: "getDay()",
+    c: "getFullYear()",
+    Explanation:
+      "The getDate() method returns the day of the month for the specified date according to local time. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate",
+  },
+
+  {
+    question:
+      "In JavaScript, which of the following methods returns the day of the week for the specified date according to local time?",
+
+    correct: "getDay()",
+    a: "getDate()",
+    b: "getTheSpecificDay()",
+    c: "getFullYear()",
+    Explanation:
+      "The getDay() method returns the day of the week for the specified date according to local time, where 0 represents Sunday. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay",
+  },
+
+  {
+    question:
+      "In JavaScript, which of the following methods returns the year of the specified date according to local time?",
+
+    correct: "getFullYear()",
+    a: "getDate()",
+    b: "listTheYear()",
+    c: "getMyFullYearNow()",
+    Explanation:
+      "The getFullYear() method returns the year of the specified date according to local time. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear",
+  },
+
+  {
+    question:
+      "In JavaScript, which of the following methods returns the day of the hour for the specified date, according to local time?",
+
+    correct: "getHours()",
+    a: "getMyHour()",
+    b: "getMilliseconds()",
+    c: "getHour()",
+    Explanation:
+      "The getHours() method returns the hour for the specified date, according to local time. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns the milliseconds in the specified date according to local time?",
+
+    correct: "getMilliseconds()",
+    a: "getMillisec()",
+    b: "getTheMillisecondsNow()",
+    c: "getMinutes()",
+    Explanation:
+      "The getMilliseconds() method returns the milliseconds in the specified date according to local time. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns the minutes in the specified date according to local time?",
+
+    correct: "getMinutes()",
+    a: "getMin()",
+    b: "getMilliseconds()",
+    c: "getTheMinutes()",
+    Explanation:
+      "The getMinutes() method returns the minutes in the specified date according to local time. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns the month in the specified date according to local time, as a zero-based value?",
+
+    correct: "getMonth()",
+    a: "getTheMonth()",
+    b: "getSeconds()",
+    c: "getTime()",
+    Explanation:
+      "The getMonth() method returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns the seconds in the specified date according to local time?",
+
+    correct: "getSeconds()",
+    a: "getSec()",
+    b: "getTheSeconds()",
+    c: "getTime()",
+    Explanation:
+      "The getSeconds() method returns the seconds in the specified date according to local time. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods returns the number of milliseconds since the Unix Epoch?",
+
+    correct: "getTime()",
+    a: "getMilliseconds()",
+    b: "getSeconds()",
+    c: "getTheTime()",
+    Explanation:
+      "The getTime() method returns the number of milliseconds since the Unix Epoch. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime",
+  },
+  {
+    question:
+      "In JavaScript, which method returns an HTMLCollection object that consists of all of the elements that have the same class name?",
+
+    correct: "getElementsByClassName()",
+    a: "querySelector()",
+    b: "getElementsByName()",
+    c: "getElementsByTagName()",
+    Explanation:
+      "The getElementsByClassName method returns an object containing all of the child elements with that given class name.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName",
+  },
+  {
+    question: "In JavaScript, which operator is used to concatenate strings?",
+
+    correct: "+",
+    a: "*",
+    b: "&",
+    c: "#",
+    Explanation:
+      "The addition operator (+) produces the sum of numeric operands or string concatenation.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition",
+  },
+  {
+    question: "What are the two basic groups of data types in JavaScript?",
+
+    correct: "Primitive and Reference types",
+    a: "Enumerated and Object types",
+    b: "Primitive and Floating types",
+    c: "Character and Number types",
+    Explanation:
+      "Primitive and Reference types are the two basic groups of data types in JavaScript.",
+    Link: "https://www.freecodecamp.org/news/primitive-vs-reference-data-types-in-javascript",
+  },
+  {
+    question:
+      "In JavaScript, what method is used to arrange array values into alphabetical and/or ascending order?",
+
+    correct: "sort()",
+    a: "shift()",
+    b: "unshift()",
+    c: "from()",
+    Explanation:
+      "The sort() method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+  },
+  {
+    question:
+      "In JavaScript, what method is used to arrange array values into descending order?",
+
+    correct: "reverse()",
+    a: "from()",
+    b: "unshift()",
+    c: "join()",
+    Explanation:
+      "The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse",
+  },
+  {
+    question:
+      "In JavaScript, the ____________ method returns the index position of the first occurrence of a value in a string.",
+
+    correct: "indexOf()",
+    a: "getPosition()",
+    b: "valueOf()",
+    c: "charAt(0)",
+    Explanation:
+      "The indexOf() method returns the first index of the specified value in a string and will return -1 if it is not present.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf",
+  },
+  {
+    question:
+      "In JavaScript, which of the following is the default separator in the join() method?",
+
+    correct: "comma (',')",
+    a: "space (' ')",
+    b: "empty string ('')",
+    c: "full-stop ('.')",
+    Explanation:
+      "If a separator is omitted, the array elements are separated with a comma (',').",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join",
+  },
+  {
+    question:
+      "In JavaScript, which method boils an array down to a single value?",
+
+    correct: "reduce()",
+    a: "map()",
+    b: "filter()",
+    c: "forEach()",
+    Explanation:
+      "The reduce() method iterates over the entire array and returns the value that results from running the “reducer” callback function to completion. The returned result is a single value.",
+    Link: "https://www.freecodecamp.org/news/the-ultimate-guide-to-javascript-array-methods-reduce/",
+  },
+  {
+    question:
+      "In JavaScript, which method creates a new array and returns all of the items which pass the condition specified in the callback?",
+
+    correct: "filter()",
+    a: "split()",
+    b: "concat()",
+    c: "flat()",
+    Explanation:
+      "The filter() method creates a new array and returns all of the items which pass the condition specified in the callback.",
+    Link: "https://www.freecodecamp.org/news/javascript-array-filter-tutorial-how-to-iterate-through-elements-in-an-array/",
+  },
+  {
+    question:
+      "In JavaScript, which method iterates over the elements of an array and creates a new array based on the results of the function specified within said method?",
+
+    correct: "map()",
+    a: "reverse()",
+    b: "split()",
+    c: "concat()",
+    Explanation:
+      "The map() method creates a new array filled with the results of calling a function (provided within the method) on every element in the array that calls the method.",
+    Link: "https://www.freecodecamp.org/news/array-map-tutorial/",
+  },
+  {
+    question: "What kind of function accepts another function as an argument?",
+
+    correct: "Higher order",
+    a: "Arrow function",
+    b: "Anonymous function",
+    c: "Named function",
+    Explanation:
+      "A Higher Order Function is any function that returns a function when executed, takes a function as one or more of its arguments, or both.",
+    Link: "https://www.freecodecamp.org/news/higher-order-functions-in-javascript-d9101f9cf528/",
+  },
+  {
+    question:
+      "In JavaScript, which pair of symbols can be used in place of quotes to define a string?",
+
+    correct: "Template literals : ``",
+    a: "Square brackets: []",
+    b: "Curly braces: {}",
+    c: "Angle brackets: <>",
+    Explanation:
+      "Template literals are literals delimited with backticks (`), allowing embedded expressions called substitutions. Untagged template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method that is used to convert a string into an array?",
+
+    correct: "split()",
+    a: "slice()",
+    b: "trim()",
+    c: "concat()",
+    Explanation:
+      "The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split",
+  },
+  {
+    question:
+      "In JavaScript, what method removes the first element of an array and returns it?",
+
+    correct: ".shift()",
+    a: ".push()",
+    b: ".pop()",
+    c: ".unshift()",
+    Explanation:
+      "The .shift() method removes the first element of an array and returns it. ",
+    Link: "https://www.freecodecamp.org/news/the-javascript-array-handbook/",
+  },
+  {
+    question: "In JavaScript, what is the value of x ? let x = undefined || 1;",
+
+    correct: "1",
+    a: "2",
+    b: "undefined",
+    c: "null",
+    Explanation:
+      "The value of x is 1 because undefined is a falsy value and that's why 1 is assigned to the variable x.",
+    Link: "https://www.freecodecamp.org/news/javascript-logical-operators/",
+  },
+  {
+    question: "In JavaScript, how do you create a promise inside a function?",
+
+    correct: "return new Promise((resolve, reject) => {})",
+    a: "return new Promise(resolve, reject)",
+    b: "return new Promise((resolve, reject))",
+    c: "return Promise((reject, resolve))",
+    Explanation:
+      "You can use a promise inside a function with the following syntax: return new Promise((resolve, reject) => {})",
+    Link: "https://www.freecodecamp.org/news/javascript-promises-explained/",
+  },
+  {
+    question:
+      "In JavaScript, what is the correct syntax to check if two variables are strictly equal?",
+
+    correct: "if(A === B)",
+    a: "if(A == B)",
+    b: "if(A = B)",
+    c: "if(A.equals(B))",
+    Explanation:
+      "The triple equals operator (===) will check for strict equality because it checks for the same data type and value.",
+    Link: "https://www.freecodecamp.org/news/javascript-promises-explained/",
+  },
+  {
+    question:
+      "In JavaScript, what method adds an element to the end of an array?",
+
+    correct: ".push()",
+    a: ".pop()",
+    b: ".shift()",
+    c: ".unshift()",
+    Explanation: "The .push() method adds an element to the end of the array.",
+    Link: "https://www.freecodecamp.org/news/the-javascript-array-handbook/",
+  },
+  {
+    question: "What does JSON stand for?",
+
+    correct: "JavaScript Object Notation",
+    a: "Jupiter Script Object Notation",
+    b: "Jabber Script Object Notation",
+    c: "Jargon Script Object Notation",
+    Explanation:
+      "JSON stands for JavaScript Object Notation which is a text-based format to store and exchange data.",
+    Link: "https://www.freecodecamp.org/news/what-is-json-a-json-file-example/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the technique used to extract an object's values into new variables?",
+
+    correct: "Object destructuring",
+    a: "Array destructuring",
+    b: "Hoisting",
+    c: "typeof",
+    Explanation:
+      "Object destructuring is used to extract an object's values into new variables.",
+    Link: "https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, which one of these methods modifies an array in place?",
+
+    correct: ".splice()",
+    a: ".slice()",
+    b: ".filter()",
+    c: ".join()",
+    Explanation:
+      "The .splice() method modifies an array in place and it can be used to remove or add elements to an array.",
+    Link: "https://www.freecodecamp.org/news/javascript-array-slice-vs-splice-whats-the-difference/",
+  },
+  {
+    question:
+      "Which of the following tools are the most convenient for running tasks in a NodeJS environment?",
+
+    correct: "npm scripts",
+    a: "gulp",
+    b: "grunt",
+    c: "Makefile",
+    Explanation:
+      "Npm scripts allow command line tools to be called directly without relying on external plugins.",
+    Link: "https://www.freecodecamp.org/news/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8/",
+  },
+  {
+    question: "In JavaScript, how can you convert a string to an integer?",
+
+    correct: "parseInt()",
+    a: "parseString()",
+    b: "parseInteger()",
+    c: "parseSrt()",
+    Explanation:
+      "The parseInt() function converts the value passed as an argument to an integer.",
+    Link: "https://www.freecodecamp.org/news/convert-string-to-number-javascript/",
+  },
+  {
+    question: "In JavaScript, how do you write a multiline comment?",
+
+    correct: "/* */",
+    a: "//",
+    b: "<!-- -->",
+    c: "** **",
+    Explanation: "In JavaScript, we use /* */ to write a multiline comment.",
+    Link: "https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-comment-your-javascript-code/16783",
+  },
+  {
+    question: "In JavaScript, what is the logical AND operator?",
+
+    correct: "&&",
+    a: "||",
+    b: "!",
+    c: "**",
+    Explanation: "&& is the logical AND operator in JavaScript.",
+    Link: "https://www.freecodecamp.org/news/javascript-logical-operators/",
+  },
+  {
+    question:
+      "In JavaScript, which one of these types of loops will always run at least once?",
+
+    correct: "Do... While Loop",
+    a: "While Loop",
+    b: "For Loop",
+    c: "for each",
+    Explanation:
+      "The sequence of statements in a do..while loop runs at least once because the condition is evaluated after running the statements. ",
+    Link: "https://www.freecodecamp.org/news/javascript-loops-explained-for-loop-for/",
+  },
+  {
+    question: "Which one is NOT a JavaScript library?",
+
+    correct: "C#",
+    a: "React",
+    b: "D3",
+    c: "Moment",
+    Explanation:
+      "There are many popular JavaScript libraries including React, D3 and Moment.",
+    Link: "https://www.freecodecamp.org/news/10-javascript-libraries-you-should-try/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to add new elements to the DOM tree?",
+
+    correct: "document.createElement()",
+    a: "Callback function",
+    b: ".querySelectorAll()",
+    c: ".textContent()",
+    Explanation:
+      "The document.createElement() method is used to add new elements to the DOM tree.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the property used to get the text content of a node in the DOM?",
+
+    correct: "textContent",
+    a: "text-content",
+    b: "content",
+    c: "getContent",
+    Explanation:
+      "The textContent property is used to get the text content of a node in the DOM.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what is the JavaScript keyword used to define a constant?",
+
+    correct: "const",
+    a: "var",
+    b: "let",
+    c: "concat",
+    Explanation:
+      "The keyword const is used to define a constant in JavaScript. The value of a constant can't be changed through reassignment.",
+    Link: "https://www.freecodecamp.org/news/javascript-variables-beginners-guide/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the technique used to extract array values into new variables?",
+
+    correct: "Array destructuring",
+    a: "typeof",
+    b: "async",
+    c: "Optional chaining",
+    Explanation:
+      "Array destructuring is used  to extract array values into new variables.",
+    Link: "https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to see if one string is found in another?",
+
+    correct: ".includes()",
+    a: ".padEnd()",
+    b: ".slice()",
+    c: ".trim()",
+    Explanation:
+      "The .includes() method is used to check if one string is found in another.",
+    Link: "https://www.freecodecamp.org/news/javascript-string-contains-how-to-use-js-includes/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name for variables that are accessible throughout the program?",
+
+    correct: "Global variables",
+    a: "Const variables",
+    b: "Local variables",
+    c: "No variable is accessible throughout in JavaScript",
+    Explanation:
+      "Global variables are declared and made accessible throughout the entire JavaScript program.",
+    Link: "https://www.freecodecamp.org/news/global-variables-in-javascript-explained/",
+  },
+  {
+    question: "In JavaScript, what keyword is used to define a function?",
+
+    correct: "function",
+    a: "def",
+    b: "func",
+    c: "fct",
+    Explanation:
+      "The function keyword is used to define a function in JavaScript.",
+    Link: "https://www.freecodecamp.org/news/what-is-a-function-javascript-function-examples/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method that extracts a portion of an array and returns a new array?",
+
+    correct: ".slice()",
+    a: ".splice()",
+    b: ".pop()",
+    c: ".sort()",
+    Explanation:
+      "The .slice() method extracts a portion of an array and returns a new array.",
+    Link: "https://www.freecodecamp.org/news/javascript-array-slice-vs-splice-whats-the-difference/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to select elements in an HTML document by referencing the id name?",
+
+    correct: ".getElementById()",
+    a: ".getElementByClass()",
+    b: ".getId()",
+    c: ".getElementByTagName()",
+    Explanation:
+      "The .getElementById() method is used to select elements in the HTML document by referencing the id name.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question: "In HTML, what are <script> tags?",
+
+    correct: "they're used for client side JavaScript code",
+    a: "used for server side JavaScript code",
+    b: "used to link SQL databases",
+    c: "used to link noSQL databases",
+    Explanation: "The script tag is used for client side JavaScript code.",
+    Link: "https://www.freecodecamp.org/news/basic-html5-template-boilerplate-code-example/",
+  },
+  {
+    question:
+      "In JavaScript, which one of these operators is the equality operator?",
+
+    correct: "==",
+    a: "?",
+    b: "!=",
+    c: "!==",
+    Explanation:
+      "The == operator returns true if two values are equal and false if they are not equal. It converts the values to a common type before doing the comparison.",
+    Link: "https://www.freecodecamp.org/news/javascript-triple-equals-sign-vs-double-equals-sign-comparison-operators-explained-with-examples/",
+  },
+
+  {
+    question:
+      "In JavaScript, what string method returns the character at the specified index?",
+
+    correct: ".charAt()",
+    a: ".getChar()",
+    b: ".char()",
+    c: ".character()",
+    Explanation:
+      "The .charAt() method returns the character at the specified index in JavaScript.",
+    Link: "https://devdocs.io/javascript/global_objects/string/charat",
+  },
+  {
+    question: "What is the main purpose of JavaScript in a website?",
+
+    correct: "Functionality",
+    a: "Structure",
+    b: "Style",
+    c: "Sound",
+    Explanation:
+      "JavaScript is used to create interactive and dynamic websites.",
+    Link: "https://www.freecodecamp.org/news/what-is-javascript-javascript-code-explained-in-plain-english/",
+  },
+  {
+    question: "Are semicolons strictly required in JavaScript?",
+
+    correct: "No",
+    a: "Yes",
+    b: "only when using the concat method",
+    c: "only when using the split method",
+    Explanation:
+      "JavaScript does not require strict use of semicolons because it inserts them where they are needed through a process called Automatic Semicolon Insertion.",
+    Link: "https://www.freecodecamp.org/news/lets-talk-about-semicolons-in-javascript-f1fe08ab4e53/#:~:text=This%20is%20all%20possible%20because%20JavaScript%20does%20not%20strictly%20require%20semicolons.&text=It's%20important%20to%20know%20the,not%20behave%20like%20you%20expect.",
+  },
+  {
+    question:
+      "In JavaScript, what value is returned by default when a function doesn't have a return statement?",
+
+    correct: "undefined",
+    a: "None",
+    b: "concat",
+    c: "0",
+    Explanation:
+      "The value undefined is returned by functions that do not have a return statement.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions",
+  },
+  {
+    question:
+      "In JavaScript, what operator takes an array and spreads it into its individual elements?",
+
+    correct: "Spread operator",
+    a: "Rest operator",
+    b: "Division Operator",
+    c: "Multiplication Operator",
+    Explanation:
+      "The spread operator takes an array and spreads it into its individual elements. With this operator, we can pass the elements of an array as individual arguments to a function call.",
+    Link: "https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/",
+  },
+  {
+    question:
+      "In JavaScript, what method removes the last element of an array and returns it?",
+
+    correct: ".pop()",
+    a: ".push()",
+    b: ".shift()",
+    c: ".unshift()",
+    Explanation:
+      "The .pop() method removes the last element of an array and returns it.",
+    Link: "https://www.freecodecamp.org/news/the-javascript-array-handbook/",
+  },
+  {
+    question:
+      "In JavaScript, which one of these variable declarations can be re declared within its scope?",
+
+    correct: "var",
+    a: "splice",
+    b: "object.freeze",
+    c: "concat",
+    Explanation:
+      "When you declare variables with var, they can be re-declared within their scope.",
+    Link: "https://www.freecodecamp.org/news/javascript-interview-prep-cheatsheet/",
+  },
+  {
+    question: "In JavaScript, how can you get the length of a string?",
+
+    correct: ".length",
+    a: "len()",
+    b: "length()",
+    c: ".size()",
+    Explanation:
+      "Strings have a .length property that contains their length (number of characters).",
+    Link: "https://devdocs.io/javascript/global_objects/string/length",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method that converts all of the letters in a string to lowercase?",
+
+    correct: "toLowerCase",
+    a: "toUpperCase",
+    b: "toLow",
+    c: "lower",
+    Explanation:
+      "The toLowerCase method is used to convert all of the letters in a string to lowercase.",
+    Link: "https://www.freecodecamp.org/news/javascript-tolowercase-how-to-convert-a-string-to-lowercase-and-uppercase-in-js/",
+  },
+  {
+    question: "In JavaScript, what are the three types of scope?",
+
+    correct: "global, function, block",
+    a: "global, function, map",
+    b: "reduce, function, block",
+    c: "const, function, block",
+    Explanation:
+      "The three types of scope in JavaScript are global, function and block.",
+    Link: "https://www.freecodecamp.org/news/javascript-interview-prep-cheatsheet/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to attach an event to an HTML element like a button?",
+
+    correct: ".addEventListener()",
+    a: "Hoisting",
+    b: ".getElementById()",
+    c: ".getElementByTagName()",
+    Explanation:
+      "The .addEventListener() method is used to attach an event to an HTML element like a button.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what operator allows you to create a function that takes a variable number of arguments?",
+
+    correct: "Rest operator",
+    a: "Spread operator",
+    b: "Division Operator",
+    c: "Multiplication Operator",
+    Explanation:
+      "The rest operator takes the individual arguments passed to a function and converts them into an array.",
+    Link: "https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/",
+  },
+  {
+    question: "What is the DOM in JavaScript?",
+
+    correct:
+      "A programming interface to create, change, or remove elements from the document.",
+    a: "A process that moves variables, functions, and classes to the top of the scope.",
+    b: "Technique used to extract array values into new variables.",
+    c: "A function that is used as an argument for another function.",
+    Explanation:
+      "The DOM is a programming interface to create, change, or remove elements from the document.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of a function that is passed as an argument to another function?",
+
+    correct: "Callback function",
+    a: "Arrow function",
+    b: "Anonymous function",
+    c: "Function declaration",
+    Explanation:
+      "A callback function is a function that is passed as an argument to another function and then called inside the outer function.",
+    Link: "https://www.freecodecamp.org/news/javascript-callback-function-plain-english/",
+  },
+  {
+    question:
+      "In JavaScript, what string method combines the text of two or more strings and returns a new string?",
+
+    correct: ".concat()",
+    a: ".combine()",
+    b: ".string()",
+    c: ".join()",
+    Explanation:
+      "The .concat() method combines the text of two or more strings and returns a new string.",
+    Link: "https://devdocs.io/javascript/global_objects/string/concat",
+  },
+  {
+    question: "What is the filename extension of a JavaScript file?",
+
+    correct: ".js",
+    a: ".py",
+    b: ".j",
+    c: ".javascript",
+    Explanation: "JavaScript files have a .js filename extension.",
+    Link: "https://en.wikipedia.org/wiki/JavaScript",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to find all of the elements in the DOM that match a CSS selector and return a list of all of those nodes?",
+
+    correct: ".querySelectorAll()",
+    a: "Array destructuring",
+    b: ".includes() method",
+    c: "await",
+    Explanation:
+      "The .querySelectorAll() method is used to find all of the elements that match the CSS selector and return a list of all of those nodes.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question: "In JavaScript, what is the logical OR operator?",
+
+    correct: "||",
+    a: "&&",
+    b: "!",
+    c: "**",
+    Explanation: "|| is the logical OR operator in JavaScript.",
+    Link: "https://www.freecodecamp.org/news/javascript-logical-operators/",
+  },
+  {
+    question:
+      "What was JavaScript originally called when it was first released?",
+
+    correct: "Mocha",
+    a: "LiveScript",
+    b: "Java",
+    c: "Netscape",
+    Explanation:
+      "When JavaScript first came out it was called Mocha, then later changed to LiveScript and finally settled on JavaScript.",
+    Link: "https://www.freecodecamp.org/news/what-is-javascript-javascript-code-explained-in-plain-english/",
+  },
+  {
+    question: "Which company created JavaScript?",
+
+    correct: "Netscape",
+    a: "IBM",
+    b: "Xerox",
+    c: "Google",
+    Explanation:
+      "Brendan Eich created JavaScript when he was working at Netscape.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method that returns true if at least one of the elements in an array passes the test implemented by the function provided?",
+
+    correct: ".some()",
+    a: ".findIndex()",
+    b: ".includes()",
+    c: ".isArray()",
+    Explanation:
+      "The .some() method returns true if at least one of the elements in the array passes the test implemented by the function provided. ",
+    Link: "https://www.freecodecamp.org/news/javascript-array-some-tutorial-how-to-iterate-through-elements-in-an-array/",
+  },
+  {
+    question: "In JavaScript, what is the logical NOT operator?",
+
+    correct: "!",
+    a: "&&",
+    b: "||",
+    c: "%",
+    Explanation: "! is the logical NOT operator in JavaScript.",
+    Link: "https://www.freecodecamp.org/news/javascript-logical-operators/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the method used to find elements that match one or more selectors?",
+
+    correct: ".querySelector()",
+    a: ".textContent()",
+    b: ".padEnd()",
+    c: "Optional chaining",
+    Explanation:
+      "The .querySelector() method is used to find elements in the DOM that match one or more selectors.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what is the name of the process that moves variables, functions, and classes to the top of the scope?",
+
+    correct: "Hoisting",
+    a: "Setter",
+    b: "Break",
+    c: "Await",
+    Explanation:
+      "Hoisting is the process of moving variables, classes, and functions to the top of the scope.",
+    Link: "https://www.freecodecamp.org/news/what-is-hoisting-in-javascript/",
+  },
+  {
+    question: "In JavaScript, what are the three ways to declare a variable?",
+
+    correct: "var, let, const",
+    a: "variable, let, const",
+    b: "var, let-var, const",
+    c: "var, concat, let",
+    Explanation:
+      "In JavaScript, you can declare variables using var, let or const.",
+    Link: "https://www.freecodecamp.org/news/javascript-interview-prep-cheatsheet/",
+  },
+  {
+    question:
+      "In JavaScript, what keyword is used to declare a variable that can only be used in the scope of declaration?",
+
+    correct: "let",
+    a: "splice",
+    b: "concat",
+    c: "block",
+    Explanation:
+      "In JavaScript, you can use let to declare a variable that can only be used in the scope of declaration.",
+    Link: "https://www.freecodecamp.org/news/javascript-variables-beginners-guide/",
+  },
+  {
+    question:
+      "In JavaScript, what method joins all of the elements of an array into a string?",
+
+    correct: ".join()",
+    a: ".char()",
+    b: ".fill()",
+    c: ".every()",
+    Explanation:
+      "The .join() method joins all of the elements of an array into a string.",
+    Link: "https://devdocs.io/javascript/global_objects/array/join",
+  },
+  {
+    question:
+      "In JavaScript, what method adds an element to the beginning of an array?",
+
+    correct: ".unshift()",
+    a: ".push()",
+    b: ".pop()",
+    c: ".shift()",
+    Explanation:
+      "The .unshift() method adds the element passed as an argument to the beginning of an array.",
+    Link: "https://www.freecodecamp.org/news/the-javascript-array-handbook/",
+  },
+  {
+    question:
+      "In JavaScript, What is the name of the method that converts all of the letters in a string to uppercase?",
+
+    correct: "toUpperCase",
+    a: "toLowerCase",
+    b: "toUpper",
+    c: "upper",
+    Explanation:
+      "The toUpperCase method is used to convert all of the letters in a string to uppercase.",
+    Link: "https://www.freecodecamp.org/news/javascript-tolowercase-how-to-convert-a-string-to-lowercase-and-uppercase-in-js/",
+  },
+  {
+    question: "In JavaScript, how do you write an inline comment?",
+
+    correct: "// Comment",
+    a: "/* Comment",
+    b: "# Comment",
+    c: "<!-- Comment -->",
+    Explanation: "In JavaScript, an inline comment starts with //",
+    Link: "https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-comment-your-javascript-code/16783",
+  },
+  {
+    question: "In JavaScript, what does the spread operator do?",
+
+    correct:
+      "It can be used to copy portions of an array or object into another array or object.",
+    a: "It can be used to check whether a certain value is present in another array.",
+    b: "It can be used to remove the first element of an array.",
+    c: "It can be used to return an array with an object's properties.",
+    Explanation:
+      "The spread operator can be used to copy portions of an array or object into another array or object.",
+    Link: "https://www.freecodecamp.org/news/how-to-use-es6-javascript-features-in-react/",
+  },
+  {
+    question: "What does DOM stand for?",
+
+    correct: "Document Object Model",
+    a: "Data Object Model",
+    b: "Document Online Model",
+    c: "Document Object Mainframe",
+    Explanation: "DOM stands for Document Object Model.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-dom-document-object-model-meaning-in-javascript/",
+  },
+  {
+    question:
+      "How can you change the background color of an HTML element using JavaScript?",
+
+    correct: "element.style.backgroundColor = 'red'",
+    a: "element.style.backgroundcolor = 'red'",
+    b: "element.style.background-color = 'red'",
+    c: "element.style.bgColor = 'red'",
+    Explanation:
+      "JavaScript syntax is slightly different from CSS syntax. In JavaScript, you use camelCase instead of hyphens.",
+    Link: "https://youtu.be/5fb2aPlgoys?t=704",
+  },
+  {
+    question:
+      "In JavaScript, when an operator value is NULL, the typeof returned by the operator is:",
+
+    correct: "Object",
+    a: "Undefined",
+    b: "Integer",
+    c: "Boolean",
+    Explanation:
+      "In JavaScript, typeof null is an object. This result of typeof null is actually a bug in the language.",
+    Link: "https://www.freecodecamp.org/news/javascript-typeof-how-to-check-the-type-of-a-variable-or-object-in-js/",
+  },
+  {
+    question: "In JavaScript, what will 'typeof []' return?",
+
+    correct: "Object",
+    a: "Null",
+    b: "Array",
+    c: "Undefined",
+    Explanation:
+      "In JavaScript, everything that is not a primitive value is an object.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures",
+  },
+  {
+    question: "In JavaScript, what will 'typeof NaN' return?",
+
+    correct: "Number",
+    a: "ReferenceError",
+    b: "Null",
+    c: "NaN",
+    Explanation:
+      "In JavaScript, NaN (not-a-number) is still a numeric data type, but it is undefined as a real number.",
+    Link: "https://www.freecodecamp.org/news/javascript-typeof-how-to-check-the-type-of-a-variable-or-object-in-js/",
+  },
+  {
+    question: "In JavaScript, what will the following code return: typeof a?",
+
+    correct: "undefined",
+    a: "string",
+    b: "object",
+    c: "number",
+    Explanation:
+      "In JavaScript, if you use the typeof operator on an undeclared variable then it will return undefined. ",
+    Link: "https://www.freecodecamp.org/news/javascript-typeof-how-to-check-the-type-of-a-variable-or-object-in-js/",
+  },
+  {
+    question:
+      "What JavaScript keyword will return the type of a variable when you call it?",
+
+    correct: "typeof",
+    a: "datatype",
+    b: "this",
+    c: "var",
+    Explanation:
+      "typeof is a JavaScript keyword that will return the type of a variable when you call it. You can use this to validate function parameters or check if variables are defined.",
+    Link: "https://www.freecodecamp.org/news/javascript-data-types-typeof-explained/",
+  },
+  {
+    question: "In JavaScript, what is the return value of the .push() method?",
+
+    correct: "new length of the array, after the element has been pushed",
+    a: "undefined",
+    b: "null",
+    c: "Length of the old array, before the element is pushed",
+    Explanation:
+      ".push() returns the new length of the array, after the element has been pushed",
+    Link: "https://www.freecodecamp.org/news/how-to-insert-an-element-into-an-array-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, which method allows you to cancel a repeated action created with setInterval()?",
+
+    correct: "clearInterval",
+    a: "clearImmediate",
+    b: "clearTimeout",
+    c: "stopInterval",
+    Explanation:
+      "This clearInterval() method is used to stop the timed loop that was started by the setInterval() method.",
+    Link: "https://www.freecodecamp.org/news/javascript-timing-events-settimeout-and-setinterval/",
+  },
+  {
+    question:
+      "In JavaScript, which of the following is NOT the correct way to declare a variable?",
+
+    correct: "number",
+    a: "let",
+    b: "var",
+    c: "const",
+    Explanation:
+      "JavaScript has three kinds of variable declarations: var, let and const.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#declarations",
+  },
+  {
+    question: "In JavaScript, how many primitive data types are there?",
+
+    correct: "7",
+    a: "3",
+    b: "6",
+    c: "8",
+    Explanation:
+      "JavaScript has 7 primitive data types. Boolean, null, undefined, Number, BigInt, String and Symbol",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#data_structures_and_types",
+  },
+  {
+    question: "In JavaScript, what does NaN means?",
+
+    correct: "Not-A-Number",
+    a: "Near-Me Area Network",
+    b: "Non-Alpha-Numeric",
+    c: "Non-numeric",
+    Explanation:
+      "The global NaN property is a value representing Not-A-Number. This property is used to check if a value is not a valid number.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+  },
+  {
+    question:
+      "In JavaScript, are variables declared with let, const and var hoisted? Select the most appropriate answer",
+
+    correct:
+      "Yes, but variables declared with let and const are in Temporal Dead Zone",
+    a: "Yes",
+    b: "No",
+    c: "No, only variables declared with var are hoisted.",
+    Explanation:
+      "Variables declared with let, const and var are hoisted. But, const and let are in temporal dead zone.",
+    Link: "https://www.freecodecamp.org/news/javascript-temporal-dead-zone-and-hoisting-explained/",
+  },
+  {
+    question: "In JavaScript, what is the difference between == and ===?",
+
+    correct: "== allows for type coercion of the values, while === does not",
+    a: "== does not allow for type coercion of the values, while === does",
+    b: "== and === both allow for type coercion of the values, but === is more strict",
+    c: "There is no difference between == and ===",
+    Explanation:
+      "The == operator allows for type coercion of the values, while === does not.",
+    Link: "https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/",
+  },
+  {
+    question: "In JavaScript, how many falsy values are there?",
+
+    correct: "6",
+    a: "5",
+    b: "7",
+    c: "8",
+    Explanation:
+      "There are 6 falsy values in JavaScript: false, 0, '', null, undefined, and NaN.",
+    Link: "https://www.freecodecamp.org/news/falsy-values-in-javascript/",
+  },
+  {
+    question: "In JavaScript, what is a function without a name called?",
+
+    correct: "An anonymous function",
+    a: "An unsigned function",
+    b: "A ghost function",
+    c: "A nameless function",
+    Explanation:
+      "A function without a name is called an anonymous function. This is useful when you want to pass a function as an argument to another function.",
+    Link: "https://www.freecodecamp.org/news/what-are-functions-in-javascript-a-beginners-guide/",
+  },
+  {
+    question: "In JavaScript, what does IIFE stand for?",
+
+    correct: "Immediately Invoked Function Expression",
+    a: "Immediately Invoked Function Executor",
+    b: "Internally Invoked Function Expression",
+    c: "Internally Invoked Function Executor",
+    Explanation:
+      "IIFE stands for Immediately Invoked Function Expression. This is a function that is executed immediately after it is created.",
+    Link: "https://www.freecodecamp.org/news/iife-in-javascript-what/",
+  },
+  {
+    question:
+      "Which JavaScript DOM manipulation method adds multiple classes to an element?",
+
+    correct: "classList()",
+    a: "className",
+    b: "classVar",
+    c: "classConstructor",
+    Explanation:
+      "The classList() method adds multiple classes to an element. You can use it to add a class or multiple classes to an element by attaching the add() method to it. For example classList.add('btn'), or classList.add('btn', 'btn-block')",
+    Link: "https://www.freecodecamp.org/news/what-is-dom-in-javascript/#how-to-manipulate-css-from-javascript",
+  },
+  {
+    question:
+      "In JavaScript, what is the difference between a parameter and an argument?",
+
+    correct:
+      "A parameter is a variable in a function definition. An argument is the actual value of this variable that gets passed to the function.",
+    a: "A parameter is the actual value of a variable that gets passed to a function. An argument is a variable in a function definition.",
+    b: "A parameter is a variable in a function definition. An argument is a variable in a function definition.",
+    c: "A parameter is the actual value of a variable that gets passed to a function. An argument is the actual value of this variable that gets passed to the function.",
+    Explanation:
+      "A parameter is a variable in a function definition. An argument is the actual value of this variable that gets passed to the function.",
+    Link: "https://www.freecodecamp.org/news/what-is-the-difference-between-parameters-and-arguments-in-javascript",
+  },
+  {
+    question:
+      "In JavaScript, what is the difference between a function declaration and a function expression?",
+
+    correct:
+      "A function declaration is a function that is defined using the function keyword. A function expression is a function that is defined using a function expression.",
+    a: "A function declaration is a function that is defined using a function expression. A function expression is a function that is defined using the function keyword.",
+    b: "A function declaration is a function that is defined using the function keyword. A function expression is a function that is defined using a function declaration.",
+    c: "A function declaration is a function that is defined using a function expression. A function expression is a function that is defined using a function declaration.",
+    Explanation:
+      "The main difference between a function declaration and a function expression is the function name, which can be omitted in function expressions to create anonymous functions. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function",
+  },
+  {
+    question:
+      "In JavaScript, what is the return value for the following code:  [1, 2, 3, 4].shift()?",
+
+    correct: "1",
+    a: "2, 3, 4",
+    b: "4",
+    c: "1, 2, 3",
+    Explanation:
+      "The shift() method removes the first element from an array and returns that removed element.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+  },
+  {
+    question: "In JavaScript, which is a correct way to concatenate 3 arrays?",
+
+    correct: "const newArr = arr1.concat(arr2, arr3)",
+    a: "const newArr = join(arr1, arr2, arr3)",
+    b: "const newArr = combine[arr1, arr2, arr3]",
+    c: "const newArr = arr1.join[arr2, arr3]",
+    Explanation:
+      "The concat() method is used to combine two or more arrays and returns a new array.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat",
+  },
+  {
+    question:
+      "Given the following JavaScript array, ['a', 'b', 'c', 'd', 'e'], what method is used to return ['c', 'd', 'e']?",
+
+    correct: "arr.slice(2,5)",
+    a: "arr.fill(c, d, e)",
+    b: "arr.keys(c, d, e)",
+    c: "arr.remove(0, 1)",
+    Explanation:
+      "The slice() method has two optional parameters which represent the starting and ending index for the array. This method returns a new shallow copy of the sliced array.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+  },
+  {
+    question:
+      "In JavaScript, what is the result for [22, -4, 99, 103, -30, 172].find(x => x > 50)?",
+
+    correct: "99",
+    a: "{99, 103, 172}",
+    b: "undefined",
+    c: "[99, 103, 172]",
+    Explanation:
+      "The find() method will look through the array and return the first element that passes the callback function.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find",
+  },
+  {
+    question:
+      "In JavaScript, what array method takes an integer value and returns the element at that index?",
+
+    correct: ".at()",
+    a: ".value()",
+    b: ".flat()",
+    c: ".some()",
+    Explanation:
+      "The at() method takes a positive or negative integer and returns the index for that element.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at",
+  },
+  {
+    question: "In JavaScript, what is the runtime model based on?",
+
+    correct: "Event Loop",
+    a: "Stack Memory Allotment Model",
+    b: "Queue Memory Allotment Model",
+    c: "Non Blocking Model",
+    Explanation:
+      "The event loop is responsible for executing the code, processing events, and monitoring the callback queue and stack. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop",
+  },
+  {
+    question:
+      "In JavaScript, which one is a type of data structure that stores unique values?",
+
+    correct: "Set",
+    a: "Maps",
+    b: "Object",
+    c: "Array",
+    Explanation:
+      "A JavaScript Set is a type of data structure that stores unique values.",
+    Link: "https://www.freecodecamp.org/news/lets-learn-about-set-and-its-unique-functionality-in-javascript-5654c5c03de2/",
+  },
+  {
+    question: "In JavaScript, what is the optional chaining operator?",
+
+    correct: "?.",
+    a: "??",
+    b: "&&",
+    c: "**",
+    Explanation: "?. is the optional chaining operator in JavaScript.",
+    Link: "https://www.freecodecamp.org/news/javascript-optional-chaining/",
+  },
+  {
+    question:
+      "In JavaScript, what is the result for the following code: ('b' + 'a' + + 'cteri' + 'a').toLowerCase()?",
+
+    correct: "banana",
+    a: "b+a+cteri+a",
+    b: "bacteria",
+    c: "Undefined",
+    Explanation:
+      "JavaScript will concatenate all the strings together and attempt to convert 'cteri' to a number using the unary plus operator, and since 'cteri' is not a number, the result will be NaN(Not a Number) which altogether is banana",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus",
+  },
+  {
+    question: "In JavaScript, which of the following is not an array method?",
+
+    correct: ".search()",
+    a: ".includes()",
+    b: ".forEach()",
+    c: ".join()",
+    Explanation:
+      "The search() method searches through the string to find a match to a regular expression. If no match is found, then the return value will be -1.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search",
+  },
+  {
+    question:
+      "In JavaScript, which method executes a function once the timer expires?",
+
+    correct: "setTimeout",
+    a: "setInterval",
+    b: "clearInterval",
+    c: "clearTimeout",
+    Explanation:
+      "The setTimeout() method allows you to execute a piece of code after a certain amount of time has passed.",
+    Link: "https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/",
+  },
+  {
+    question:
+      "In JavaScript, which one of these console methods displays an array or object of rows and columns?",
+
+    correct: "console.table()",
+    a: "console.assert()",
+    b: "console.group()",
+    c: "console.log()",
+    Explanation:
+      "The console.table() method displays an array or object of rows and columns.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/API/console/table",
+  },
+  {
+    question: "In JavaScript, what type of value is an Array?",
+
+    correct: "Object",
+    a: "Array",
+    b: "Map",
+    c: "Set",
+    Explanation:
+      "In JavaScript besides primitives types, we have the Object value type. Arrays are a special type of object that represents a collection of similar types of values.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+  },
+  {
+    question: "In JavaScript, what type of value is an Array?",
+
+    correct: "Object",
+    a: "Array",
+    b: "Map",
+    c: "Set",
+    Explanation:
+      "In JavaScript besides primitives types, we have the Object value type. Arrays are a special type of object that represents a collection of similar types of values.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+  },
+  {
+    question:
+      "In JavaScript, which of the following methods will return the string representation of a number?",
+
+    correct: "toFixed()",
+    a: "parseFloat()",
+    b: "valueOf()",
+    c: "round()",
+    Explanation:
+      "The toFixed() method converts a number to a string and rounds it to a specified number of decimals.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed",
+  },
+  {
+    question: "In JavaScript, what should be the output of 3 < 2 < 1?",
+
+    correct: "true",
+    a: "false",
+    b: "syntax error",
+    c: "NaN",
+    Explanation:
+      "JavaScript will first evaluate 3 < 2 which will return false. Then JavaScript will evaluate false < 1 which will return true because false is converted to the number 0. ",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table",
+  },
+  {
+    question:
+      "In JavaScript, which operator has the highest precedence among these options?",
+
+    correct: "Grouping ()",
+    a: "Increment ++",
+    b: "Unary plus +",
+    c: "Equality ==",
+    Explanation:
+      "On the precedence table, the grouping () operator is the highest with a precedence value of 18",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table",
+  },
+  {
+    question:
+      "In JavaScript, all objects inherit a built-in property from a ___________________.",
+
+    correct: "prototype",
+    a: "node",
+    b: "instance variable",
+    c: "accessor",
+    Explanation:
+      "Prototypes provide the means for JavaScript objects to inherit features from other objects.",
+    Link: "https://www.freecodecamp.org/news/javascript-prototype-explained-with-examples/",
+  },
+  {
+    question: "In JavaScript, how many threads does code run in?",
+
+    correct: "Single thread",
+    a: "Multiple threads",
+    b: "No threads",
+    c: "Can be both single threaded and multi-threaded",
+    Explanation:
+      "JavaScript is a single-threaded language because it has one call stack and memory heap.",
+    Link: "https://www.freecodecamp.org/news/javascript-concurrency-model-and-event-loop/",
+  },
+  {
+    question: "What does BOM stand for?",
+
+    correct: "Browser Object Model",
+    a: "Boolean Object Manipulation",
+    b: "Browser Object Manifest",
+    c: "Backend Object Model",
+    Explanation:
+      "The Browser Object Model is a convention that refers to all objects displayed in the browser.",
+    Link: "https://en.wikipedia.org/wiki/Browser_Object_Model",
+  },
+  {
+    question:
+      "In JavaScript, which Web API stores and retrieves data from the web browser?",
+
+    correct: "localStorage",
+    a: "Array",
+    b: "Object",
+    c: "Class",
+    Explanation:
+      "localStorage is a JavaScript object that stores data as key-value pairs in a web browser with no expiration date.",
+    Link: "https://www.freecodecamp.org/news/how-to-store-data-in-web-browser-storage-localstorage-and-session-storage-explained/",
+  },
+  {
+    question: "In JavaScript, what does the .seal() method do?",
+
+    correct: "Prevents new properties from being added to it.",
+    a: "Permits its prototype from being reassigned",
+    b: "Allows its existing properties to be removed",
+    c: "Prevents its existing value from being modified",
+    Explanation:
+      "JavaScript's Object.seal() method prevents the addition of new properties, removal of existing properties or the reassignment of its prototype.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal",
+  },
+  {
+    question:
+      "In JavaScript, which of the following Math objects rounds a number down to the nearest whole integer?",
+
+    correct: "Math.floor()",
+    a: "Math.ceil()",
+    b: "Math.round()",
+    c: "Math.abs()",
+    Explanation:
+      "Math.floor() is a JavaScript method that rounds a number down to the nearest whole number or integer.",
+    Link: "https://www.freecodecamp.org/news/math-in-javascript/",
+  },
+  {
+    question:
+      "In JavaScript, what is it called when an event is triggered on a target element and subsequent parent elements?",
+
+    correct: "Event bubbling",
+    a: "Event propagation",
+    b: "Event capturing",
+    c: "Event handling",
+    Explanation:
+      "Event bubbling is an event propagation method that starts with the element that triggered the event and then bubbles up to its parent elements in their respective hierarchy.",
+    Link: "https://www.freecodecamp.org/news/event-propagation-event-bubbling-event-catching-beginners-guide/",
+  },
+  {
+    question: "In JavaScript, what is the nullish coalescing operator?",
+
+    correct: "??",
+    a: "?.",
+    b: "&&",
+    c: "**",
+    Explanation:
+      "?? is the optional nullish coalescing in JavaScript. It returns the first operand if it is not null or undefined. Otherwise, it returns the second operand.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator",
+  },
+  {
+    question:
+      "In JavaScript, which one gets higher precedence among 'setTimeout' and 'Promise' (considering zero delay)?",
+
+    correct: "Promise",
+    a: "setTimeout",
+    b: "Depends on the order of calling",
+    c: "Unpredictable",
+    Explanation:
+      "Promises will always have a higher precedence than setTimeout. The Promise will be executed before the setTimeout, regardless of the order in which they are called.",
+    Link: "https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/",
+  },
+  {
+    question: "In JavaScript, what is the result for typeof NaN?",
+
+    correct: "number",
+    a: "Object",
+    b: "String",
+    c: "Undefined ",
+    Explanation:
+      "typeof NaN will return number because NaN is a property of the Number object in JavaScript",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+  },
+  {
+    question:
+      "In JavaScript, which array method returns a new iterable iterator object?",
+
+    correct: "values()",
+    a: "concat()",
+    b: "entries()",
+    c: "sort()",
+    Explanation:
+      "The array.values() method returns a new array iterator. To access each element in that new array iterator, you can use a for...of loop.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values",
+  },
+  {
+    question:
+      "What is the name for the primary entry point for all client-side JavaScript features and APIs?",
+
+    correct: "Window",
+    a: "Split",
+    b: "Reduce",
+    c: "Gate",
+    Explanation:
+      "The Window object provides access to all JavaScript capabilities and APIs that are used on the client side.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/API/Window",
+  },
+  {
+    question:
+      "In JavaScript, which of the following functions accepts an image element and a file as arguments?",
+
+    correct: "FileUpLoad",
+    a: "DownFile",
+    b: "Client",
+    c: "Database",
+    Explanation:
+      "An HTML <input> element with the type='file' attribute is represented by the Input FileUpload object and is a client-side JavaScript object.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications",
+  },
+  {
+    question:
+      "In JavaScript, which methods accept an iterable of promises and returns a single array of results?",
+
+    correct: "Promise.all() and Promise.allSettled()",
+    a: "Promise.any() and Promise.all()",
+    b: "Promise.resolve() and Promise.allSettled()",
+    c: "Promise.reject() and Promise.reject()",
+    Explanation:
+      "Promise.all() and Promise.allSettled() accept an iterable of promises and return a single array of results.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+  },
+  {
+    question:
+      "In JavaScript, what will be the return value of console.log(new String('Hello, world!') === 'Hello, world!')?",
+
+    correct: "false",
+    a: "equal",
+    b: "not equal",
+    c: "true",
+    Explanation:
+      "The answer is false. Triple equal ('===') compares the value and the type as well.",
+    Link: "https://youtu.be/zJSY8tbf_ys?t=24429",
+  },
+  {
+    question:
+      "In JavaScript, which keyword is used to make portions of code accessible to other modules?",
+
+    correct: "export",
+    a: "import",
+    b: "as",
+    c: "from",
+    Explanation:
+      "The export keyword is used to make it possible to access small portions of code in other modules.",
+    Link: "https://www.freecodecamp.org/news/javascript-modules-explained-with-examples/#",
+  },
+  {
+    question:
+      "Which of the following options is a web API that runs code asynchronously in JavaScript?",
+
+    correct: "setTimeOut()",
+    a: "repeat()",
+    b: "timeOut()",
+    c: "delay()",
+    Explanation:
+      "The setTimeout() function is an asynchronous function that will not pause execution of other functions in the stack.",
+    Link: "https://www.freecodecamp.org/news/javascript-settimeout-how-to-set-a-timer-in-javascript-or-sleep-for-n-seconds/",
+  },
+  {
+    question:
+      "In JavaScript, what is the result of the following code: console.log(7 + '5')?",
+
+    correct: "75",
+    a: "11",
+    b: "57",
+    c: "undefined",
+    Explanation:
+      "The result for console.log(7 + '5') is 75 because the + operator is used to concatenate strings.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition",
+  },
+  {
+    question:
+      "In JavaScript, what is the result of the following code: console.log(7 - '5')?",
+
+    correct: "2",
+    a: "12",
+    b: "undefined",
+    c: "NaN",
+    Explanation:
+      "The result is 2 because in JavaScript you can't use the - operator on strings so it will automatically convert the strings to numbers and subtract the two values.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction#subtraction_with_non-numbers",
+  },
+  {
+    question:
+      "In JavaScript, the ___________ method returns the index position of the last occurrence of a value in an array.",
+
+    correct: "lastIndexOf()",
+    a: "indexOf()",
+    b: "charAt(0)",
+    c: "getPosition()",
+    Explanation:
+      "The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf",
+  },
+  {
+    question:
+      "In JavaScript, which of the following is not a primitive data type?",
+
+    correct: "Object",
+    a: "Number",
+    b: "String",
+    c: "Undefined",
+    Explanation:
+      "JavaScript has 7 primitive data types. Boolean, null, undefined, Number, BigInt, String and Symbol",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#data_structures_and_types",
+  },
+  {
+    question:
+      "In JavaScript, how many ways can you access an object's properties?",
+
+    correct: "2",
+    a: "1",
+    b: "8",
+    c: "13",
+    Explanation:
+      "To access data from an object in JavaScript, you can use either dot notation or bracket notation.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors",
+  },
+  {
+    question:
+      "In JavaScript, what is the classification for a 'function' and 'class'?",
+
+    correct: "Declaration statements",
+    a: "Keywords",
+    b: "Data types",
+    c: "Variables",
+    Explanation:
+      "Both 'function' and 'class' are used in the beginning to declare a function and class respectively.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements",
+  },
+  {
+    question:
+      "In JavaScript, which of the following is NOT a composite data type?",
+
+    correct: "String",
+    a: "Array",
+    b: "Class",
+    c: "Object",
+    Explanation:
+      "In JavaScript, a composite data type is defined as not being an object as well as having no properties or methods.",
+    Link: "https://developer.mozilla.org/en-US/docs/Glossary/Primitive",
+  },
+  {
+    question:
+      "In JavaScript, what is the result for the following code: console.log(true + 34)?",
+
+    correct: "35",
+    a: "34",
+    b: "true34",
+    c: "true",
+    Explanation:
+      "Since true is converted to the number 1, then true + 34 would result in 35.",
+    Link: "https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion",
+  },
+  {
+    question:
+      "In JavaScript, how many parameters does the forEach() method take?",
+
+    correct: "3",
+    a: "1",
+    b: "2",
+    c: "4",
+    Explanation:
+      "The forEach() method takes 3 parameters: the current value, the index, and the array.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+  },
+  {
+    question:
+      "In JavaScript, how many parameters does the reduce() method take?",
+
+    correct: "4",
+    a: "1",
+    b: "2",
+    c: "3",
+    Explanation:
+      "The reduce() method takes 4 parameters: the accumulator, the current value, the index, and the array.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce",
+  },
+  {
+    question:
+      "In JavaScript, which array method returns true if ALL values pass a condition?",
+
+    correct: "every()",
+    a: "some()",
+    b: "filter()",
+    c: "find()",
+    Explanation:
+      "The every() method returns true if all values in the array pass a condition and false if any value fails the condition.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every",
+  },
+  {
+    question: "In JavaScript, what does the forEach() method return?",
+
+    correct: "undefined",
+    a: "true",
+    b: "false",
+    c: "null",
+    Explanation:
+      "forEach() always returns undefined. It makes no difference whether the return keyword is used or not.",
+    Link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+  },
+  {
+    question:
+      "In JavaScript, what is the name for a variable that can be changed?",
+
+    correct: "Mutable Variable",
+    a: "Volatile Variable",
+    b: "Dynamic Variable",
+    c: "Fluid Variable",
+    Explanation:
+      "Variables that can have their values changed are referred to as Mutable Variables. Only objects and arrays are changeable in JavaScript; primitive values are not.",
+    Link: "https://developer.mozilla.org/en-US/docs/Glossary/Mutable",
+  },
+];
